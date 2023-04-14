@@ -87,6 +87,14 @@ public class UsrArticleController {
 		
 		return this.articles;
 	}
+	@RequestMapping("/usr/article/getArticle")
+	@ResponseBody
+	public Article getArticle(int id) {
+		
+		Article article = getArticleById(id);
+		
+		return article;
+	}
 	
 	@RequestMapping("/usr/article/doDelete")
 	@ResponseBody
